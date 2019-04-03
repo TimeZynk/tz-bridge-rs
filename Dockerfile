@@ -1,7 +1,7 @@
 FROM openapitools/openapi-generator-cli:v4.0.0-beta2 AS generator
 
 RUN docker-entrypoint.sh generate \
-    -i https://raw.githubusercontent.com/TimeZynk/bridge-api-spec/v0.0.2/spec/openapi.yaml \
+    -i https://raw.githubusercontent.com/TimeZynk/bridge-api-spec/v0.1.0/spec/openapi.yaml \
     -g rust-server \
     -DpackageName=timezynk-bridge-models \
     -o /local/rust-server
