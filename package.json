@@ -4,6 +4,6 @@
         "start": "openapi-generator generate -i https://raw.githubusercontent.com/TimeZynk/bridge-api-spec/master/spec/openapi.yaml -g rust-server -o ./ -DpackageName=timezynk-bridge-models"
     },
     "dependencies": {
-        "@openapitools/openapi-generator-cli": "^0.0.8-4.0.0-beta2"
+        "@openapitools/openapi-generator-cli": "^0.0.17-4.1.1"
     }
 }

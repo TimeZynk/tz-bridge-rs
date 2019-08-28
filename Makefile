@@ -6,6 +6,7 @@ generate:
 	docker build -t timezynk-bridge-models .
 
 build:
+	docker rm bridge-builder
 	docker run --name bridge-builder timezynk-bridge-models cargo build --release
 	docker cp bridge-builder:/opt/timezynk-bridge-models .tmp
 	docker rm bridge-builder
