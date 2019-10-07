@@ -1,9 +1,9 @@
-FROM openapitools/openapi-generator-cli:v4.1.1 AS generator
+FROM openapitools/openapi-generator-cli:v4.1.3 AS generator
 
 RUN docker-entrypoint.sh generate \
     -i https://raw.githubusercontent.com/TimeZynk/bridge-api-spec/v0.1.0/spec/openapi.yaml \
     -g rust-server \
-    -DpackageName=timezynk-bridge-models \
+    --package-name timezynk-bridge-models \
     -o /local/rust-server
 WORKDIR /local/rust-server
 RUN sed 's/authors.*/authors = ["Timezynk <dev@timezynk.com>"]/' Cargo.toml > cargo.tmp && \

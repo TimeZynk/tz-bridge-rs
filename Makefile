@@ -3,7 +3,7 @@
 CARGO_TOKEN := $(shell tail -n1 ~/.cargo/credentials | cut -d\" -f2)
 
 generate:
-	docker build -t timezynk-bridge-models .
+	docker build --pull --no-cache -t timezynk-bridge-models .
 
 build:
 	docker rm bridge-builder
